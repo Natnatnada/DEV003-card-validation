@@ -7,7 +7,22 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <h1>¡Ingresa tus datos para terminar la compra!</h1>
+      <div class="ingreso-datos">
+        <label for="numeroTarjeta" class="form-label">Ingresa los datos de tu tarjeta aqui</label>
+        <!-- agregar maximo de numeros aceptados maxlength y no autocompletar-->     
+             <input  class="form-control" id="numeroTarjeta" placeholder="################" maxlength="16" autocomplete="off"
+             />
+           </div>
+           <div class="boton-comprobar">
+            <input type="button" value="Comprobar tarjeta" id="botonComprobar">
+          </div>
+          <div class="cuadro-texto">
+            <label for="validacionTarjeta" class="form-label">¿Es valida tu tarjeta?</label>
+            <textarea disabled="true" class="form-control" id="validacionTarjeta" ></textarea>
+          </div>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
