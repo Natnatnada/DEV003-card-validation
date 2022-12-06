@@ -1,34 +1,50 @@
 const validator = {
 
-  isValid(creditCardNumber) {
-    /*typeError: Cannot read property 'reverse' of undefined so creditCardNumber.split('').reverse(); ?
-    luego pasara a mi index algoritmoLuhn para hacer la comprobacion de la tarjeta
-    */
-    let value = creditCardNumber.reverse();
-    for(let i=0; i<value.length; i++){
-      if(i%2 !=0){
-        value[i] = value[i] * 2;
-        if(value[i] > 9){
-          value[i]= parseInt(string(value[i]).charAt(0))+parseInt(String(value[i]).charAt(1))
+  /*
+  
+  }*/
+  isValid: function creditCardNumber(numeroTarjeta) {
+    let length = numeroTarjeta.length;
+    let count = 0;
 
+    if(length % 2 == 0)
+    {
+        /*cantidad de veces que se repetira el ciclo i es igual a 0, se repetira hasa el length y aumentara++ */
+        for(let i= 0; i< length; i++)
+        {
+            let currentDigit = parseInt(numeroTarjeta[i]);
+            if (i % 2 == 0)
+            {
+                if ((currentDigit *= 2) > 9)
+                {
+                    let trailingNumber = currentDigit % 10;
+                    let firstNumber = parseInt(currentDigit / 10);
+                    currentDigit = firstNumber + trailingNumber;
+                }
+            }
+            count += currentDigit;
         }
-      }
     }
-    
-    let sum = 0;
+    else 
+    {
+        for(let i = length - 1 ; i >= 0; i--)
+        {
+            let currentDigit = parseInt(numeroTarjeta[i]);
+            if ((i - 1) % 2 == 0)
+            {
+                if ((currentDigit *= 2) > 9)
+                {
+                    let trailingNumber = currentDigit % 10;
+                    let firstNumber = parseInt(currentDigit / 10);
+                    currentDigit = firstNumber + trailingNumber;
+                }
+            }
+            count += currentDigit;
+        }
+}
+return (count % 10) === 0;
+}
 
-    for(let i=1; i<value.length; i++){
-      sum += parseInt(value[i]);
-      
-    }
-    sum = sum * 9 % 10;
-    if (value[0] == sum){
-      return true
-    }
-    else{
-      return false
-    }
-  }
 
   /*
 maskify(creditCardNumber){
