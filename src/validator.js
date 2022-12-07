@@ -1,9 +1,6 @@
 const validator = {
 
-  /*
-  
-  }*/
-  isValid: function creditCardNumber(numeroTarjeta) {
+  isValid: function creditCardNumber(numeroTarjeta) {  
     let length = numeroTarjeta.length;
     let count = 0;
 
@@ -19,6 +16,7 @@ const validator = {
                 {
                     let trailingNumber = currentDigit % 10;
                     let firstNumber = parseInt(currentDigit / 10);
+//  si es que el numero es +10 suma ambos digitos, ex 16, 1+6                    
                     currentDigit = firstNumber + trailingNumber;
                 }
             }
@@ -46,20 +44,20 @@ return (count % 10) === 0;
 }
 
 
-  /*
-maskify(creditCardNumber){
-  if(creditCardNumber.length> 4){
-    let hideNumber ="*".repeat(creditCardNumber.length -4);
-    let showLastFour =creditCardNumber.substring(creditCardNumber.length -4);
+/*
+maskify (numeroTarjeta){
+  if(numeroTarjeta.length> 4){
+    let hideNumber ="*".repeat(numeroTarjeta.length -4);
+    let showLastFour =numeroTarjeta.substring(numeroTarjeta.length -4);
     let mask =hideNumber+showLastFour;
     return mask;
   }
   else {
-    return creditCardNumber;
+    return numeroTarjeta;
   }
 
 }
-    */
+ */   
 };
 
 

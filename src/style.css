@@ -9,10 +9,74 @@ html{
     font-family: 'Inconsolata';
     font-size: 20px;
 }
+.header{
+    background-color: rgba(171, 114, 185, 0.459);
+    display: flex;
+    /* texto alineado a la derecha*/
+    justify-content: space-between;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+.linkinicio a:hover{
+    background: rgb(141, 79, 165);
+    border-radius: 13px;
+}
+h1 {
+    padding: 15px;
+    text-align: center;
+}
+/*container para posicionar tarjeta y caja de datos a un lado*/
+.cajageneral{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    padding: 100px;
+}
+.datostarjeta{
+    background: url("images/tarjeta.jpg");
+    width: 100%;
+    background-size: cover;
+    max-width: 400px;
+    padding: 80px 80px;
+    /* como modificar margin*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+      /* alinea posicion letras del contenedor */
+    align-items: flex-end;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.grupo .label{
+    font-size: 18   px;
+    color: rgb(252, 252, 252);
+    margin-bottom: 5px;
+    text-align: left;
+}
+.grupo .numero{ 
+    font-size: 20px;
+    color: rgb(252, 252, 252);
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 5px;
+} 
+.cajadatos{
+    background-color: rgba(101, 27, 119, 0.788);
+    width: 100%;
+    /* medidas formulario arriba, derecha abajo izquierda*/
+    padding: 40px 40px;
+    max-width: 400px;
+    border-radius: 13px;
+}   
 footer{
     background-color: rgba(150, 96, 163, 0.705);
     display: flex;
     justify-content: center;
     padding: 50px;
+    
+}
+.cuadro-texto{
+    border-radius: 10px;
     
 }

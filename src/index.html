@@ -6,22 +6,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="header">
+        <p class="portalpago">Portal de Pago</p>
+        <!--incluir imagen en header para indicar portal de pagos. links no funcionales-->
+        <nav class="linkinicio">
+        <ul>
+                 <!--links vacios  -->
+        <a href="#">Inicio</a>
+        <a href="#">Seguir comprando</a>
+        </ul>
+      </nav>                                        
+      </div>
+    </header>
     <main>
       <h1>¡Ingresa tus datos para terminar la compra!</h1>
+      <div class="cajageneral">
+      <div class="datostarjeta">
+        <div class="grupo" id="inputNumero">
+        <p class="label">Número de tarjeta</p>
+        <p class="numero">#### #### #### ####</p>
+      </div>
+      </div>
+      <div class="cajadatos">
       <div class="ingreso-datos">
-        <label for="numeroTarjeta" class="form-label">Ingresa los datos de tu tarjeta aqui</label>
+        <label for="numeroTarjeta" class="form-label">Ingresa los datos de tu tarjeta</label>
         <!-- agregar maximo de numeros aceptados maxlength y no autocompletar-->     
-             <input  class="form-control" id="numeroTarjeta" placeholder="################" maxlength="16" autocomplete="off"
-             />
+             <input type="text" class="form-control" id="numeroTarjeta" placeholder="*******" maxlength="16" autocomplete="off"/>
            </div>
            <div class="boton-comprobar">
             <input type="button" value="Comprobar tarjeta" id="botonComprobar">
           </div>
           <div class="cuadro-texto">
-            <label for="validacionTarjeta" class="form-label">¿Es valida tu tarjeta?</label>
+            <label for="validacionTarjeta" class="form-label">Verificar Pago</label>
             <textarea disabled="true" class="form-control" id="validacionTarjeta" ></textarea>
           </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
