@@ -65,18 +65,21 @@ h1 {
     background-color: rgba(101, 27, 119, 0.788);
     width: 100%;
     /* medidas formulario arriba, derecha abajo izquierda*/
-    padding: 40px 40px;
+    padding: 45px 45px;
     max-width: 400px;
     border-radius: 13px;
+    align-items: center;
+
+}
+.cuadro-texto{
+    border-radius: 10px;
+    
+    
 }   
 footer{
     background-color: rgba(150, 96, 163, 0.705);
     display: flex;
     justify-content: center;
     padding: 50px;
-    
-}
-.cuadro-texto{
-    border-radius: 10px;
     
 }
