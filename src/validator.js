@@ -1,64 +1,67 @@
+/* eslint-disable eqeqeq */
 const validator = {
 
   isValid: function creditCardNumber(numeroTarjeta) {  
-    let length = numeroTarjeta.length;
+    const length = numeroTarjeta.length;
     let count = 0;
 
     if(length % 2 == 0)
     {
-        /*cantidad de veces que se repetira el ciclo i es igual a 0, se repetira hasa el length y aumentara++ */
-        for(let i= 0; i< length; i++)
+      /*cantidad de veces que se repetira el ciclo i es igual a 0, se repetira hasa el length y aumentara++ */
+      for(let i= 0; i< length; i++)
+      {
+        let currentDigit = parseInt(numeroTarjeta[i]);
+        if (i % 2 == 0)
         {
-            let currentDigit = parseInt(numeroTarjeta[i]);
-            if (i % 2 == 0)
-            {
-                if ((currentDigit *= 2) > 9)
-                {
-                    let trailingNumber = currentDigit % 10;
-                    let firstNumber = parseInt(currentDigit / 10);
-//  si es que el numero es +10 suma ambos digitos, ex 16, 1+6                    
-                    currentDigit = firstNumber + trailingNumber;
-                }
-            }
-            count += currentDigit;
+          if ((currentDigit *= 2) > 9)
+          {
+            const trailingNumber = currentDigit % 10;
+            const firstNumber = parseInt(currentDigit / 10);
+            //  si es que el numero es +10 suma ambos digitos, ex 16, 1+6                    
+            currentDigit = firstNumber + trailingNumber;
+          }
         }
+        count += currentDigit;
+      }
     }
     else 
     {
-        for(let i = length - 1 ; i >= 0; i--)
+      for(let i = length - 1 ; i >= 0; i--)
+      {
+        let currentDigit = parseInt(numeroTarjeta[i]);
+        if ((i - 1) % 2 == 0)
         {
-            let currentDigit = parseInt(numeroTarjeta[i]);
-            if ((i - 1) % 2 == 0)
-            {
-                if ((currentDigit *= 2) > 9)
-                {
-                    let trailingNumber = currentDigit % 10;
-                    let firstNumber = parseInt(currentDigit / 10);
-                    currentDigit = firstNumber + trailingNumber;
-                }
-            }
-            count += currentDigit;
+          if ((currentDigit *= 2) > 9)
+          {
+            const trailingNumber = currentDigit % 10;
+            const firstNumber = parseInt(currentDigit / 10);
+            currentDigit = firstNumber + trailingNumber;
+          }
         }
-}
-return (count % 10) === 0;
-}
+        count += currentDigit;
+      }
+    }
+    return (count % 10) === 0;
+  },
 
-
-/*
-maskify (numeroTarjeta){
-  if(numeroTarjeta.length> 4){
-    let hideNumber ="*".repeat(numeroTarjeta.length -4);
-    let showLastFour =numeroTarjeta.substring(numeroTarjeta.length -4);
-    let mask =hideNumber+showLastFour;
-    return mask;
+  maskify: function(numeroTarjeta){
+    if (numeroTarjeta.length > 4) {
+      const reemplazarNumero = "#".repeat(numeroTarjeta.length - 4);
+      const mostrarFinales = numeroTarjeta.substring(numeroTarjeta.length - 4);
+      const enmascarados = reemplazarNumero + mostrarFinales;
+      return enmascarados;
+    }
+    else {
+      return numeroTarjeta;
+    } 
   }
-  else {
-    return numeroTarjeta;
-  }
-
-}
- */   
+ 
 };
+ 
+
+
+
+
 
 
 export default validator;
