@@ -25,17 +25,18 @@
       <div class="datostarjeta">
         <div class="grupo" id="numero">
         <p class="label">Número de tarjeta</p>
-        <p id="numberCard"  class="numero">#### #### #### ####</p>
+      <!--output para que retorne el resultado de comprobarLuhn-->
+        <output id="numberCard" type="text" class="numero">###########</output>
       </div>
       </div>
       <div class="cajadatos">
       <div class="ingreso-datos">
         <label for="numeroTarjeta" class="form-label">Ingresa los datos de tu tarjeta</label>
         <!-- agregar maximo de numeros aceptados maxlength y no autocompletar-->     
-             <input type="text" class="form-control" id="numeroTarjeta" placeholder="*******" maxlength="16" autocomplete="off"/>
+             <input type="text" class="form-numero" id="numeroTarjeta" placeholder="############" maxlength="16" autocomplete="off"/>
            </div>
            <div class="boton-comprobar">
-            <input type="button" value="Comprobar tarjeta" id="botonComprobar">
+            <input class="boton-datos" type="button" value="Validar Tarjeta" id="botonComprobar">
           </div>
           <div class="cuadro-texto">
             <label for="validacionTarjeta" class="form-label">Verificar Pago</label>
@@ -44,7 +45,7 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>Laboratoria 2022. DEV003</footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
