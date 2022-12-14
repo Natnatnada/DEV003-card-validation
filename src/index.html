@@ -20,6 +20,7 @@
       </div>
     </header>
     <main>
+      <!--si agrego el h1 al container general?-->
       <h1>¡Ingresa tus datos para terminar la compra!</h1>
       <div class="cajageneral">
       <div class="datostarjeta">
@@ -33,7 +34,7 @@
       <div class="ingreso-datos">
         <label for="numeroTarjeta" class="form-label">Ingresa los datos de tu tarjeta</label>
         <!-- agregar maximo de numeros aceptados maxlength y no autocompletar-->     
-             <input type="text" class="form-numero" id="numeroTarjeta" placeholder="############" maxlength="16" autocomplete="off"/>
+             <input type="text" class="form-numero" id="numeroTarjeta" placeholder="##########" maxlength="16" autocomplete="off" onkeypress="return event.charCode>=48 && event.charCode<=57"/>
            </div>
            <div class="boton-comprobar">
             <input class="boton-datos" type="button" value="Validar Tarjeta" id="botonComprobar">

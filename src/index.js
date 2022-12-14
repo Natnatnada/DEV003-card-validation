@@ -32,3 +32,10 @@ function comprobarLuhn() {
   else {return numberCard.value}
 }
 
+/*
+function campoNumerico(event) {
+  if(event.charCode >= 48 && event.charCode <= 57){
+    return true;
+   }
+   return false;        
+} */
