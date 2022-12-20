@@ -19,10 +19,13 @@ La principal necesidad y problema que cubre es ser una aplicación web para real
 La idea del primer prototipo es la que se presenta en la imagen, sin embargo con el paso de los sprint este diseño se fue modificando en base a los requerimientos del proyecto y en función del tiempo disponible también.
 ***
 Primer prototipo
+
 ![primer prototipo](https://postimg.cc/B8mYHsCr)
 ***
 Diseño final
-![https://postimg.cc/TKM3vvnv]
+
+![segundo prototipo]([https://postimg.cc/TKM3vvnv)
+
 ***
 El diseño final se simplifico para priorizar la implementación de las funciones en JS
 ***
@@ -37,8 +40,10 @@ En este proyecto, utilizaremos _Github Pages_ para desplegar nuestro sitio web.
 
 ## Recursos
 
-[Algoritmo de Luhn](http://bit.ly/3iWMWxF)
-[Guia visual Flexbox](https://flexbox.malven.co/)
-[Fuentes de google](https://fonts.google.com/)
-[Descarga de imagenes ](https://www.freepik.es/)
-[El Mostrador, 2022](https://bit.ly/3YjPFl4)
+### Enlaces de recursos utilizados
+
+* [Algoritmo de Luhn](http://bit.ly/3iWMWxF)
+* [Guia visual Flexbox](https://flexbox.malven.co/)
+* [Fuentes de google](https://fonts.google.com/)
+* [Descarga de imagenes ](https://www.freepik.es/)
+* [El Mostrador, 2022](https://bit.ly/3YjPFl4)
