@@ -31,7 +31,9 @@ El diseño final se simplifico para priorizar la implementación de las funcione
 ***
 ## Definiciones Tecnicas
 ***
+Para este proyecto se trabajo con el algoritmo de Luhn
 
+_Este algoritmo es simple. Obtenemos la reversa del número a verificar (que solamente contiene dígitos [0-9]); a todos los números que ocupan una posición par se les debe multiplicar por dos, si este número es mayor o igual a 10, debemos sumar los dígitos del resultado; el número a verificar será válido si la suma de sus dígitos finales es un múltiplo de 10._
 #### Deploy
 Hacer que los sitios estén publicados (o _desplegados_) para que usuarias de
 la web puedan acceder a él es algo común en proyectos de desarrollo de software.

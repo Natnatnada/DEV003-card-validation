@@ -17,6 +17,7 @@ const validator = {
         /* if si es divisible por 2 */
         if (i % 2 == 0)
         {
+          /*currentDigit = currentDigit*2 if mayor que */
           if ((currentDigit *= 2) > 9)
           {
             /* se separan los numeros en componentes para luego sumarlos juntos*/
@@ -32,7 +33,8 @@ const validator = {
     }
     else 
     {
-      /**/
+      /* para tarjetas con menos numeros validator ej 79927398713 
+      mayor o igual que 0 i-- disminuye en 1 */
       for(let i = length - 1 ; i >= 0; i--)
       {
         let currentDigit = parseInt(numeroTarjeta[i]);
@@ -40,23 +42,30 @@ const validator = {
         {
           if ((currentDigit *= 2) > 9)
           {
+            /* separar en componentes que luego se unen en current digit */
             const trailingNumber = currentDigit % 10;
             const firstNumber = parseInt(currentDigit / 10);
+            /* si current digit +10 se unen los componentes tal como arriba 16 ej 1+6 */
             currentDigit = firstNumber + trailingNumber;
           }
         }
         count += currentDigit;
       }
     }
-    /*si es divisible por  */
+    /*si count es divisible por 10 equal */
     return (count % 10) === 0;
   },
 
   maskify: function(numeroTarjeta){
-    if (numeroTarjeta.length > 4) {
+    /* si el length del id mayor a 4 */
+    if (numeroTarjeta.length > 4)
+    /* se repite # menos en los ultimos 4 digitos -4 */ {
       const reemplazarNumero = "#".repeat(numeroTarjeta.length - 4);
+      /*substring para crear serie de caracteres nuevaa, menos los ultimos 4 en este caso */
       const mostrarFinales = numeroTarjeta.substring(numeroTarjeta.length - 4);
+      /* devuelve los numeros remplazados con # + los ultimos 4 */
       const enmascarados = reemplazarNumero + mostrarFinales;
+      /* devuelve los numeros enmascarados */
       return enmascarados;
     }
     else {
